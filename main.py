@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_page():
-    return redirect(url_for('main',name="stranger"))
+    return render_template('index.html')
 
 @app.route('/login')
 def login():
