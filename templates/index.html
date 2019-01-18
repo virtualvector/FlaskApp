@@ -8,22 +8,45 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Index Page</title>
+
+    <!-- offline links to stylesheets, js, bootstrap-->
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='greeting.css')}}">
     <script src="{{url_for('static',filename='hello.js')}}"></script>
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url_for('static',filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <div>
+    <div id='div1'>
         <h1>CLICK on any of the links</h1>
         <p><a href="http://localhost:5000/login">Login page</a></p>
         <p><a href="http://localhost:5000/">Back to home</a></p>
         <input type="button" onclick="sayHello()" value="JS Button">
 
     </div>
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
-  hello bootsrap
-</div>
+
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This is some text.</p>
+    </div>
+
 </body>
+
+
+
+
 
 </html>
