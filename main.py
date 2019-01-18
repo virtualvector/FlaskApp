@@ -1,4 +1,5 @@
 from flask import Flask,redirect,url_for,request,render_template
+import dbhandler #user-created file to handle data
 
 app = Flask(__name__)
 
@@ -20,6 +21,11 @@ def login_success():
 @app.route('/<name>/')
 def main(name):
     return render_template('greeting.html',user=name)
+
+@app.route('/database')
+def database_handler():
+    data = dbhandler.get_data_from_database()
+    return render_template('database_page.html',data=data)
 
 
 
