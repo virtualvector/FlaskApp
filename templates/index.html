@@ -30,6 +30,11 @@
 </head>
 
 <body>
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+    </div>
+    <!-- 
     <div id='div1'>
         <h1>CLICK on any of the links</h1>
         <p><a href="http://localhost:5000/login">Login page</a></p>
@@ -37,10 +42,32 @@
         <input type="button" onclick="sayHello()" value="JS Button">
 
     </div>
-
+    -->
     <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This is some text.</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <center>
+                    <h1>Click on any of the links</h1>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <center>
+                    <p><a href="http://localhost:5000/login">Login page</a></p>
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <p><a href="http://localhost:5000/">Back to home</a></p>
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <input type="button" onclick="sayHello()" value="JS Button">
+                </center>
+            </div>
+        </div>
     </div>
 
 </body>
