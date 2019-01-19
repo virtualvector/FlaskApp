@@ -22,11 +22,15 @@ def login_success():
 def main(name):
     return render_template('greeting.html',user=name)
 
+
 @app.route('/database')
 def database_handler():
     data = dbhandler.get_data_from_database()
     return render_template('database_page.html',data=data)
 
+@app.route('/images/')
+def image_handler():
+    return render_template('images_page.html')
 
 
 if __name__=='__main__':
