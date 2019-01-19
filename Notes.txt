@@ -1,0 +1,8 @@
+"""
+in-order to install matplotlib
+
+apt-get install python-tk
+pip install -U setuptools
+pip install matplotlib
+
+"""

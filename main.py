@@ -1,5 +1,7 @@
+
 from flask import Flask,redirect,url_for,request,render_template
 import dbhandler #user-created file to handle data
+import mlhandler #user-created file to handle ml-stuff
 
 app = Flask(__name__)
 
@@ -32,6 +34,12 @@ def database_handler():
 def image_handler():
     return render_template('images_page.html')
 
+@app.route('/ml_stuff/')
+def ml_handler():
+    ml_data = mlhandler.get_data_from_mlscript()
+    return render_template('ml_page.html',data=ml_data)
+
 
 if __name__=='__main__':
     app.run(debug=True)
+
