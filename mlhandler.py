@@ -11,7 +11,10 @@ def get_data_from_mlscript():
     s = 1 + np.sin(2 * np.random.randint(0,100) * t)
     plt.gcf().clear()
     plt.plot(t,s)
-    os.remove('static/images/new_plot.png')
+    try:
+        os.remove('static/images/new_plot.png')
+    except:
+        pass
     plt.savefig('static/images/new_plot.png')
     return 'static/images/new_plot.png'
     
