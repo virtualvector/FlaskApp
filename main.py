@@ -36,10 +36,11 @@ def image_handler():
 
 @app.route('/ml_stuff/')
 def ml_handler():
-    ml_data = mlhandler.get_data_from_mlscript()
-    return render_template('ml_page.html',data=ml_data)
+    url = mlhandler.get_data_from_mlscript()
+    return render_template('ml_page.html', url =url)
+    
 
-
+       
 if __name__=='__main__':
     app.run(debug=True)
 
