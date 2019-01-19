@@ -8,9 +8,10 @@ import os
 
 def get_data_from_mlscript():
     t = np.arange(0.0, 2.0, 0.01)
-    s = 1 + np.sin(2 * np.pi * t)
-
+    s = 1 + np.sin(2 * np.random.randint(0,100) * t)
+    plt.gcf().clear()
     plt.plot(t,s)
+    os.remove('static/images/new_plot.png')
     plt.savefig('static/images/new_plot.png')
     return 'static/images/new_plot.png'
     
