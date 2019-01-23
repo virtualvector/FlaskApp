@@ -7,10 +7,13 @@ import os
 
 
 def get_data_from_mlscript():
-    t = np.arange(0.0, 2.0, 0.01)
-    s = 1 + np.sin(2 * np.random.randint(0,100) * t)
+    #t = np.arange(0.0, 2.0, 0.01)
+    #s = 1 + np.sin(2 * np.random.randint(0,100) * t)
+    x = np.random.uniform(-3, 3, size=20)
+    y = np.random.uniform(-3, 3, size=20)
     plt.gcf().clear()
-    plt.plot(t,s)
+   # plt.plot(t,s)
+    plt.scatter(x,y)
     try:
         os.remove('static/images/new_plot.png')
     except:
